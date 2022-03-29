@@ -1,0 +1,78 @@
+.project {
+	@include components();
+	width: 75vw;
+	height: 90vh;
+	overflow-y: scroll;
+	flex-wrap: wrap;
+	flex-direction: row;
+	&::-webkit-scrollbar {
+		background: $color_1;
+		border-radius: 25px;
+	}
+	&::-webkit-scrollbar-corner {
+		display: none;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $color_3;
+		border-radius: 25px;
+	}
+	&_card {
+		width: calc(45% - 20px);
+		margin: 10px;
+		position: relative;
+		@media (max-width: 1200px) {
+			width: calc(95% - 20px);
+		}
+		&_top {
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&_center {
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: $color_1;
+			background: rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			cursor: pointer;
+			transition: all 0.3s;
+			h3 {
+				font-size: 1.4em;
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				@media (max-width: 350px) {
+					font-size: 1em;
+				}
+			}
+			p {
+				margin: 0 10px;
+				@media (max-width: 350px) {
+					font-size: 0.8em;
+				}
+			}
+			a {
+				margin-top: 10px;
+				border: 1px $color_1 solid;
+				padding: 10px 20px;
+				border-radius: 9px;
+				transition: all 0.3s;
+				@media (max-width: 350px) {
+					font-size: 0.8em;
+				}
+				&:hover {
+					background: $color_1;
+					color: $color_3;
+				}
+			}
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

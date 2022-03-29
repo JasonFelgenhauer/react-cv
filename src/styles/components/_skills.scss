@@ -1,0 +1,19 @@
+.skills {
+	@include components();
+	h4 {
+		font-size: 2em;
+		text-transform: uppercase;
+	}
+	ul {
+		text-align: center;
+		margin-top: 25px;
+		li {
+			font-size: 1.2em;
+			margin: 10px 0;
+		}
+	}
+	&_top,
+	&_bottom {
+		margin: 25px 0;
+	}
+}

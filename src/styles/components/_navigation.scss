@@ -1,0 +1,16 @@
+.navigation {
+	flex-direction: column;
+	a {
+		margin: 10px 0;
+		font-size: 1.2em;
+		transition: all 0.3s;
+		&:hover,
+		&:focus {
+			font-weight: 700;
+			transform: scale(1.2);
+		}
+	}
+	.active {
+		border-bottom: 3px $color_1 solid;
+	}
+}
