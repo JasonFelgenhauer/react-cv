@@ -7,7 +7,7 @@ const Project = () => {
 
 	useEffect(() => {
 		if (playOnce) {
-			axios.get('http://game01-dc03.ouiheberg.com:3000/projects').then((res) => {
+			axios.get('http://45.140.164.217:3003/projects').then((res) => {
 				setProject(res.data.data);
 				setPlayOnce(false);
 			});

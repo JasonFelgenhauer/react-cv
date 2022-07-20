@@ -8,10 +8,10 @@ const Skills = () => {
 
 	useEffect(() => {
 		if (playOnce) {
-			axios.get('http://game01-dc03.ouiheberg.com:3000/hardskills').then((res) => {
+			axios.get('http://45.140.164.217:3003/hardskills').then((res) => {
 				setHardSkills(res.data.data);
 			});
-			axios.get('http://game01-dc03.ouiheberg.com:3000/softskills').then((res) => {
+			axios.get('http://45.140.164.217:3003/softskills').then((res) => {
 				setSoftSkills(res.data.data);
 			});
 			setPlayOnce(false);
